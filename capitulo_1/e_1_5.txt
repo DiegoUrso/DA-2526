@@ -1,0 +1,1 @@
+Si el intérprete usa evaluación aplicativa, se quedará en una recursión infinita. De lo contrario, si el intérprete usa evaluación normal, devolverá 0 ya que el if se cumple y no es necesario llamar a (p).
