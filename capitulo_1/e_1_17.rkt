@@ -10,3 +10,13 @@
          (fast-mul (double a) (halve b)))
         (else 
          (+ a (fast-mul a (- b 1))))))
+
+
+; Version iterativa
+(define (fast-mul-i c a b)
+  (cond ((= b 0)
+         c)
+        ((even? b)
+         (fast-mul-i c (+ a a) (/ b 2)))
+        (else 
+         (fast-mul-i (+ c a) a (- b 1))))) 
