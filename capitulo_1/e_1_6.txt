@@ -1,0 +1,1 @@
+1.6 Se pasa el valor de aproximación(guess) junto con el valor a conseguir (x) y se evalúa con good-enough si este es correcto según las condiciones del good-enough, se retorna directamente el guess sino se vuelve a evaluar la función evaluando un mejor valor.
