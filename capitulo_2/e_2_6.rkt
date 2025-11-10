@@ -32,7 +32,3 @@
 (AND TRUE TRUE) ; TRUE
 (OR TRUE FALSE) ; TRUE
 (OR FALSE FALSE) ; FALSE
-
-; Ejercicio challege
-; Resta de números representados como funciones
-(append x y)
