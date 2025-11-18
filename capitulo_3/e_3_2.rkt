@@ -3,7 +3,7 @@
 ;; make-monitored: devuelve un procedimiento que monitoriza llamadas a f
 (define (make-monitored f)
     (define mf 0) ; contador de llamadas
-    (define (monitor . args)
+    (define (monitor . args )
         (cond
             ;revisa si es un comando especial
             [(and (pair? args)(null? (cdr args)) (symbol? (car args)))
@@ -19,10 +19,11 @@
              (apply f args)]))
     monitor)
 
-(define s (make-monitored +))
+(define s (make-monitored *))
 
 (s 16 5) ; devuelve 21
 (s 25) ; devuelve 25
 (s 'how-many-calls?) ; devuelve 2
 (s 'reset-count) ; devuelve 'reset
 (s)
+(s 'how-many-calls?) ; devuelve 1
